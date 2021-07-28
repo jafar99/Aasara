@@ -1,0 +1,511 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>OLD AGE HOME</title>
+    <link rel="shortcut icon" href="assets/images/fav.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/images/fav.jpg">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/plugins/slider/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/plugins/slider/css/owl.theme.default.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
+</head>
+
+<body>
+
+    <header class="continer-fluid ">
+
+        <div id="menu-jk" class="header-bottom">
+            <div class="container">
+                <div class="row nav-row">
+                    <div class="col-lg-3 col-md-12 logo">
+                        <a href="index.html">
+                            <img src="assets/images/logo.png" alt="">
+                            <a data-toggle="collapse" data-target="#menu" href="#menu"><i
+                                    class="fas d-block d-lg-none  small-menu fa-bars"></i></a>
+                        </a>
+
+                    </div>
+                    <div id="menu" class="col-lg-9 col-md-12 d-none d-lg-block nav-col">
+
+                        <ul class="navbad">
+
+                            <li class="nav-item active">
+                                <a class="nav-link" href="index.html">About Us
+                                </a>
+                            </li> 
+                            
+                            <li class="nav-item active">
+                                <a class="nav-link" href="donation-info.html">Donation
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="EventOragnizer.html">Event Organizer</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="members.html">Members</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="volunteets.html">Volunteers</a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link" href="memberInfo.html">Member Info</a>
+                            </li>
+                            
+                             <li class="nav-item">
+                                <a class="nav-link" href="Events.html">Events</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact_us.html">Contact US</a>
+                            </li>
+
+
+
+
+
+                        </ul>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- ******************** Slider Starts Here ******************* -->
+    <!-- <div class="slider">
+        
+        <div class="owl-carousel ">
+            <div class="slider-img">
+                <div class="item">
+                    <div class="slider-img"><img src="oldage/assets/images/slider/1.jpg" alt=""></div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
+                                <div class="animated bounceInDown slider-captions">
+                                    <h6 class="slider-title">Aging is an extraordinary process where you become the
+                                        person you always should have been!!</h6>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="slider-img"><img src="oldage/assets/images/slider/7.jpg" alt=""></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
+                            <div class="slider-captions ">
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="slider-img"><img src="oldage/assets/images/slider/2.jpg" alt=""></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
+                            <div class="slider-captions ">
+                                <h1 class="slider-title">Wrinkles means you laughed,
+                                    Grey hairs means you cared,
+                                    and scars means you lived!!</h1>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="slider-img"><img src="oldage/assets/images/slider/19.jpg" alt=""></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
+                            <div class="slider-captions ">
+                                <h1 class="slider-title"></h1>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="slider-img"><img src="oldage/assets/images/slider/20.jpg" alt=""></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
+                            <div class="slider-captions ">
+                                <h1 class="slider-title"></h1>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="item">
+                <div class="slider-img"><img src="oldage/assets/images/slider/21.jpg" alt=""></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
+                            <div class="slider-captions ">
+                                <h1 class="slider-title">Most Attractive Travel Template</h1>
+                                <p class="slider-text hidden-xs">Lorem Ipsum is simply dummy text of the printing and
+                                    typesetting industry. Lorem Ipsum has been the industry's</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="slider-img"><img src="oldage/assets/images/slider/22.jpg" alt=""></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
+                            <div class="slider-captions ">
+                                <h1 class="slider-title">Most Attractive Travel Template</h1>
+                                <p class="slider-text hidden-xs">Lorem Ipsum is simply dummy text of the printing and
+                                    typesetting industry. Lorem Ipsum has been the industry's</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div> -->
+
+    <div class="slider">
+        <div class="slider-img">
+            <div class="item">
+                    <div class="slider-img"><img src="assets/images/slider/34.JPG" alt="" width="200%" height="300% "  ></div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-offset-1 col-lg-5 col-md-offset-6 col-md-10 col-sm-12 col-xs-12"  >
+                                    <div class="animated bounceInDown slider-captions">
+                                        <h6 class="slider-title" >A "Life not lived for others is not a "Life" !!
+                                                                                                   <br>-Mother Teressa</h6>
+                                        
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+             </div>
+        </div>
+</div>
+
+
+
+
+
+
+
+
+    <!-- ============abt-01 Section  Start============ -->
+
+
+
+
+
+
+    <section class="bg-0-b">
+        <div class="container p-1">
+            <figure class="bg-light d-inline-block" class="opacity-2">
+
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div id="form_background" class="col-8 mt-5 mb-5">
+                        <div class="container">
+
+                            <div class="container">
+
+                                <h4>
+                                    <p id='description' class='text-center text-black'>It's not about how much we give
+                                        but how much love we put into giving♡♡</p>
+                                </h4>
+
+                            </div>
+
+                            <section class="bg-0-b">
+                                <div class="container">
+                                    <div class="row-2">
+                                        <div class="main-card-contact d-flex">
+                                            <form class="row g-3">
+
+                                                <div class="col-md-6">
+                                                    <label for="validationServer01" class="form-label">Name</label>
+                                                    <input type="Name" class="form-control"
+                                                        placeholder="Enter Full Name" name="t1"
+                                                        class="form-control is-valid" id="donar-name">
+                                                    <div class="valid-feedback">
+                                                        Looks good!
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    <label for="Address" class="form-label">Address</label>
+                                                    <textarea name="text" cols="40" rows="2" class="form-control"
+                                                        id="donar-address" placeholder="Enter Your Address"
+                                                        name="t2">  </textarea>
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    <label for="validationServerUsername"
+                                                        class="form-label">Email</label>
+                                                    <div class="input-group has-validation">
+                                                        <span class="input-group-text" id="inputGroupPrepend3">@</span>
+                                                        <input type="email" class="form-control"
+                                                            placeholder="yourname@gmail.com" name="t3"
+                                                            lass="form-control is-invalid" id="donar-email"
+                                                            aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback"
+                                                            required>
+                                                        <div id="validationServerUsernameFeedback"
+                                                            class="invalid-feedback">
+                                                            Enter Valid Email!!
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="col-6">
+                                                    <label for="mobile" class="form-label">Mobile No</label>
+                                                    <input type="text" class="form-control" id="donar-phone"
+                                                        placeholder="Enter Valid Mobile No." name="t4">
+                                                </div>
+
+
+                                                <div class="col-md-6">
+                                                    <label for="validationServer03" class="form-label">City</label>
+                                                    <input type="text" class="form-control is-invalid" id="donar-city"
+                                                        aria-describedby="validationServer03Feedback" required>
+                                                    <div id="validationServer03Feedback" class="invalid-feedback">
+                                                        Please provide a valid city.
+                                                    </div>
+                                                </div>
+
+
+
+                                                <div class="col-md-3">
+                                                    <label for="donar-drop-state" class="form-label">State</label>
+                                                    <select class="form-control" class="form-select is-invalid"
+                                                        id="donar-drop-state"
+                                                        aria-describedby="validationServer04Feedback" required>
+                                                        <option selected disabled value=""></option>
+                                                        <option> Andhra Pradesh </option>
+                                                        <option> Arunachal Pradesh </option>
+                                                        <option> Assam </option>
+                                                        <option> Bihar </option>
+                                                        <option> Chhattisgarh </option>
+                                                        <option> Goa </option>
+                                                        <option> Gujarat</option>
+                                                        <option> Haryana </option>
+                                                        <option> Himachal Pradesh </option>
+                                                        <option> Jammu and Kashmir</option>
+                                                        <option> Jharkhand </option>
+                                                        <option> Karnataka </option>
+                                                        <option> Kerala </option>
+                                                        <option> Madhya </option>
+                                                        <option> Maharashtra </option>
+                                                        <option> Manipur </option>
+                                                        <option> Meghalaya </option>
+                                                        <option> Mizoram </option>
+                                                        <option> Nagaland </option>
+                                                        <option> Odisha </option>
+                                                        <option> Punjab </option>
+                                                        <option> Rajasthan</option>
+                                                        <option> Sikkim </option>
+                                                        <option> Tamil Nadu </option>
+                                                        <option> Telangana </option>
+                                                        <option> Tripura</option>
+                                                        <option> Uttar Prades</option>
+                                                        <option> West Bengal </option>
+
+
+                                                    </select>
+                                                    <div id="validationServer04Feedback" class="invalid-feedback">
+                                                        Please select a valid state.
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-3">
+                                                    <label for="validationServer05" class="form-label">Zip</label>
+                                                    <input type="text" class="form-control is-invalid" id="donar-zip"
+                                                        aria-describedby="validationServer05Feedback" required>
+                                                    <div id="validationServer05Feedback" class="invalid-feedback">
+                                                        Please provide a valid zip.
+                                                    </div>
+                                                </div>
+
+
+                                                <!-- <div class="col-md-6">
+                                                    <label for="validationServer03" class="form-label">Country</label>
+                                                    <input type="text" class="form-control is-invalid"
+                                                        id="donar-country" aria-describedby="validationServer03Feedback"
+                                                        required>
+                                                    <div id="validationServer03Feedback" class="invalid-feedback">
+                                                        Please provide a valid Country.
+                                                    </div>
+                                                </div> -->
+
+
+
+
+                                                <div class="col-md-12">
+                                                    <label for="validationServer03" class="form-label">Enter Type Of
+                                                        Donation</label>
+                                                    <input type="text" class="form-control" id="donation-type"
+                                                        placeholder="BreakFast,Lunch,Dinner,fullmeal,toileteries,diaper,medicine,money"
+                                                        name="t4">
+
+                                                </div>
+
+
+                                                <br>
+                                                <br>
+                                                <br>
+                                                <button type="button" id="btn-submit" class="btn btn-primary">
+                                                    Donate
+                                                </button>
+
+                                            </form>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </figure>
+        </div>
+    </section>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <!--Freecodecamp js based project grader cdn-->
+
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <script src="assets/js/Donation.js"></script>
+    <script src="./assets/js/config.js"></script>
+
+    <!-- validation -->
+    
+
+    <script>
+
+        $("#btn-submit").click(function () {
+            donateData();
+            
+
+        });
+
+
+        function donateData() {
+            // inputs
+            var name = document.getElementById("donar-name").value;
+            var address = document.getElementById("donar-address").value;
+            var phone = document.getElementById("donar-phone").value;
+            var email = document.getElementById("donar-email").value;
+            var city = document.getElementById("donar-city").value;
+            var zip = document.getElementById("donar-zip").value;
+            var state = document.getElementById("donar-drop-state").value;
+
+            var donationType = document.getElementById("donation-type").value;
+
+            var donerDataSet = {
+
+                donerName: name,
+                donarAddress: address,
+                donarPhone: phone,
+                donarEmail: email,
+                donarCity: city,
+                donarZip: zip,
+                donarState: state,
+
+                donationType: donationType,
+
+            }
+
+            var userId = firebase.database().ref().child('donar-info').push().key;
+
+            firebase.database().ref('donar-info/' + userId).set(donerDataSet, (error) => {
+                if (error) {
+                    console.log("donation added failed");
+                    // The write failed...
+                } else {
+                    console.log("donation added successfull ");
+                    clearForm();
+                    window.location.href = "donate.html";
+                    // Data saved successfully!
+                }
+            });
+
+            function clearForm() {
+                var name = document.getElementById("donar-name").value = "";
+                var address = document.getElementById("donar-address").value = "";
+                var phone = document.getElementById("donar-phone").value = "";
+                var email = document.getElementById("donar-email").value = "";
+                var city = document.getElementById("donar-city").value = "";
+                var zip = document.getElementById("donar-zip").value = "";
+                var state = document.getElementById("donar-drop-state").value = "";
+
+                var donationType = document.getElementById("donation-type").value = "";
+            }
+
+            console.log(donerDataSet);
+
+        }
+    </script>
+
+</body>
+
+
+
+
+
+
+
+</html>
