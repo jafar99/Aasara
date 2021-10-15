@@ -20,6 +20,7 @@
     <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
 
 
+
     <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
 </head>
@@ -46,8 +47,8 @@
                             <li class="nav-item active">
                                 <a class="nav-link" href="index.html">About Us
                                 </a>
-                            </li> 
-                            
+                            </li>
+
                             <li class="nav-item active">
                                 <a class="nav-link" href="donation-info.html">Donation
                                 </a>
@@ -62,12 +63,12 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="volunteets.html">Volunteers</a>
                             </li>
-                            
+
                             <li class="nav-item">
                                 <a class="nav-link" href="memberInfo.html">Member Info</a>
                             </li>
-                            
-                             <li class="nav-item">
+
+                            <li class="nav-item">
                                 <a class="nav-link" href="Events.html">Events</a>
                             </li>
 
@@ -209,22 +210,23 @@
     <div class="slider">
         <div class="slider-img">
             <div class="item">
-                    <div class="slider-img"><img src="assets/images/slider/34.JPG" alt="" width="200%" height="300% "  ></div>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-lg-offset-1 col-lg-5 col-md-offset-6 col-md-10 col-sm-12 col-xs-12"  >
-                                    <div class="animated bounceInDown slider-captions">
-                                        <h6 class="slider-title" >A "Life not lived for others is not a "Life" !!
-                                                                                                   <br>-Mother Teressa</h6>
-                                        
-                                        
-                                    </div>
-                                </div>
+                <div class="slider-img"><img src="assets/images/slider/34.JPG" alt="" width="200%" height="300% "></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-offset-1 col-lg-5 col-md-offset-6 col-md-10 col-sm-12 col-xs-12">
+                            <div class="animated bounceInDown slider-captions">
+                                <h6 class="slider-title">A "Life not lived for others is not a "Life" !!
+                                    <br>-Mother Teressa
+                                </h6>
+
+
                             </div>
                         </div>
-             </div>
+                    </div>
+                </div>
+            </div>
         </div>
-</div>
+    </div>
 
 
 
@@ -398,6 +400,19 @@
                                                 <button type="button" id="btn-submit" class="btn btn-primary">
                                                     Donate
                                                 </button>
+                                                <br>
+                                                <button  style="margin-left: 10px;" type="button" id="btn-report"
+                                                    class="btn btn-primary ">
+                                                    See doantion
+                                                </button> </br>
+
+
+                                                <table visible="false" style="margin-top: 50px;" id="ex-table" class="table table-striped">
+                                                    <tr id="tr">
+                                                        <th>Doner Name</th>
+                                                        <th>Doner Amount</th>
+                                                    </tr>
+                                                </table>
 
                                             </form>
                                         </div>
@@ -432,16 +447,49 @@
     <script src="./assets/js/config.js"></script>
 
     <!-- validation -->
-    
+
 
     <script>
 
+        $('#ex-table').hide();
+
         $("#btn-submit").click(function () {
             donateData();
-            
+
 
         });
 
+        $("#btn-report").click(function () {
+            displayReport();
+
+
+        });
+
+
+        function displayReport(){
+            $('#ex-table').show();
+
+            var userKey= firebase.database().ref().child('donation').push().key;
+                var databaseRef = firebase.database();
+                databaseRef.ref('donation').once('value', function (snapshot) {
+                    if (snapshot.exists()) {
+                        var content = '';
+                        snapshot.forEach(function (data) {
+                            var val = data.val();
+                            console.log('doner list : ' +data);
+                            content += '<tr>';
+                            content += '<td>' + val.Account_holder_name + '</td>';
+                            content += '<td>' + val.Donated_amount + '</td>';
+                            
+                            content += '</tr>';
+                        });
+                        $('#ex-table').append(content);
+                    }else{
+                        console.log("Empty Report")
+                    }
+                });
+
+            }
 
         function donateData() {
             // inputs
@@ -493,9 +541,11 @@
                 var state = document.getElementById("donar-drop-state").value = "";
 
                 var donationType = document.getElementById("donation-type").value = "";
-            }
+            } 
 
             console.log(donerDataSet);
+
+            
 
         }
     </script>
